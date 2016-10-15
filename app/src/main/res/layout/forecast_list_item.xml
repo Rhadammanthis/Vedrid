@@ -36,16 +36,26 @@
             android:layout_below="@+id/tv_day"
             android:layout_toStartOf="@+id/iv_summary"/>
 
+        <RelativeLayout
+            android:background="#cccccc"
+            android:layout_width="10dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+
         <ImageView
             android:layout_width="30dip"
             android:layout_height="30dip"
-            android:background="#000000"
+            android:scaleType="fitXY"
             android:id="@+id/iv_summary"
+            android:src="@drawable/sol_mini"
             android:layout_marginLeft="30dip"
-            android:layout_above="@+id/tv_calMonth"
+            android:layout_alignBottom="@+id/tv_day"
             android:layout_alignParentEnd="true"/>
 
+
     </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_weight="1"

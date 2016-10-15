@@ -1,17 +1,15 @@
-package me.hugomedina.vedrid;
+package me.hugomedina.vedrid.ui;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
+import me.hugomedina.vedrid.R;
 import me.hugomedina.vedrid.adapters.ForecastAdapter;
 import me.hugomedina.vedrid.client.DataFetcher;
 import me.hugomedina.vedrid.entities.Forecast;
@@ -48,8 +46,6 @@ public class MainActivity extends Activity implements DataFetchedListener{
     @Override
     public void onDataFetched(String data) {
         if(!data.isEmpty()) {
-            Log.d("Satan", data);
-            Log.d("Satan", "lol");
             Gson gson = new Gson();
             Forecast forecast = null;
 
@@ -61,7 +57,7 @@ public class MainActivity extends Activity implements DataFetchedListener{
             }
 
 
-            Toast.makeText(MainActivity.this, String.valueOf(forecast.getDaily().getData().size()), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this, String.valueOf(forecast.getDaily().getData().size()), Toast.LENGTH_SHORT).show();
 
             ForecastAdapter adapter = new ForecastAdapter(forecast.getDaily().getData());
             recyclerView.setAdapter(adapter);
@@ -70,8 +66,6 @@ public class MainActivity extends Activity implements DataFetchedListener{
             tvSummary.setText(forecast.getCurrently().getSummary());
             tvTemp.setText(String.valueOf(forecast.getCurrently().getTemperature()));
         }
-        else
-            Log.d("Satan", "no, u fucker");
 
     }
 }

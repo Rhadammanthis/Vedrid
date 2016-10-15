@@ -49,8 +49,6 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        Log.d("Satan", String.valueOf(dataSet.get(position).getTime()));
-
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(dataSet.get(position).getTime());
 
