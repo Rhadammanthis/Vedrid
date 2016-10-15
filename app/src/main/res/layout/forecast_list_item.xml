@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="190dip">
+    <RelativeLayout
+        android:layout_width="135dip"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="mo"
+            android:id="@+id/tv_day"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/iv_summary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="16"
+            android:id="@+id/tv_calDay"
+            android:layout_marginEnd="29dp"
+            android:layout_below="@+id/tv_day"
+            android:layout_toStartOf="@+id/iv_summary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=".02"
+            android:id="@+id/tv_calMonth"
+            android:layout_below="@+id/tv_day"
+            android:layout_toStartOf="@+id/iv_summary"/>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:background="#000000"
+            android:id="@+id/iv_summary"
+            android:layout_marginLeft="30dip"
+            android:layout_above="@+id/tv_calMonth"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dip"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sunny"
+            android:id="@+id/tv_summary"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="C"
+            android:id="@+id/tv_temperature"
+            android:layout_below="@+id/tv_summary"
+            android:layout_alignStart="@+id/tv_summary"/>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:id="@+id/iv_wind"
+            android:scaleType="center"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/tv_temperature"
+            android:layout_alignStart="@+id/tv_temperature"
+            android:src="@drawable/hoja_mini"/>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:id="@+id/im_pres"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/iv_wind"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gota_mini"/>
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:id="@+id/iv_humid"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/im_pres"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:src="@drawable/gotas_mini"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="C"
+            android:id="@+id/tv_wind"
+            android:layout_below="@+id/iv_wind"
+            android:layout_alignStart="@+id/iv_wind"
+            android:layout_marginTop="10dp"
+            android:layout_alignEnd="@+id/iv_wind"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="C"
+            android:id="@+id/tv_pres"
+            android:layout_alignTop="@+id/tv_wind"
+            android:layout_alignStart="@+id/im_pres"
+            android:layout_alignEnd="@+id/im_pres"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="C"
+            android:id="@+id/tv_humid"
+            android:layout_alignTop="@+id/tv_pres"
+            android:layout_alignStart="@+id/iv_humid"
+            android:layout_alignEnd="@+id/iv_humid"/>
+    </RelativeLayout>
+
+</LinearLayout>
